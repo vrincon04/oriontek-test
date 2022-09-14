@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->group(function() {
+    // Company
     Route::resource('company', \App\Http\Controllers\CompanyController::class)
+        ->except(['create', 'edit']);
+    Route::resource('customer', \App\Http\Controllers\CustomerController::class)
         ->except(['create', 'edit']);
 });
