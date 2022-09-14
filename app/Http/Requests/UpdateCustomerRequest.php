@@ -26,7 +26,7 @@ class UpdateCustomerRequest extends FormRequest
         return [
             'first_name' => ['required', 'min:6', 'max:100'],
             'last_name' => ['required', 'min:6', 'max:100'],
-            'company_id' => ['required', 'exists:company,id']
+            'company_id' => ['required', 'exists:companies,id']
         ];
     }
 }

@@ -18,6 +18,10 @@ Route::middleware('auth:sanctum')->group(function() {
     // Company
     Route::resource('company', \App\Http\Controllers\CompanyController::class)
         ->except(['create', 'edit']);
+    // Customer
     Route::resource('customer', \App\Http\Controllers\CustomerController::class)
+        ->except(['create', 'edit']);
+    // Address
+    Route::resource('address', \App\Http\Controllers\AddressController::class)
         ->except(['create', 'edit']);
 });
